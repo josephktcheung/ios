@@ -10,4 +10,16 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBAction func imagePressed(sender: UIButton) {
+        let alertController = UIAlertController(title: "Hello World", message: nil, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+
+    @IBAction func backButtonPressed(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }
