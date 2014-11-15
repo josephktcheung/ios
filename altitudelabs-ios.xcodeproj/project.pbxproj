@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7CE24B7E1A16D626006D82A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE24B7D1A16D626006D82A4 /* AppDelegate.swift */; };
-		7CE24B801A16D626006D82A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE24B7F1A16D626006D82A4 /* ViewController.swift */; };
 		7CE24B831A16D626006D82A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CE24B811A16D626006D82A4 /* Main.storyboard */; };
 		7CE24B851A16D626006D82A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CE24B841A16D626006D82A4 /* Images.xcassets */; };
 		7CE24B881A16D626006D82A4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CE24B861A16D626006D82A4 /* LaunchScreen.xib */; };
 		7CE24B941A16D626006D82A4 /* altitudelabs_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE24B931A16D626006D82A4 /* altitudelabs_iosTests.swift */; };
+		7CE24B9F1A16D7A1006D82A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE24B9E1A16D7A1006D82A4 /* LoginViewController.swift */; };
+		7CE24BA11A16E1A2006D82A4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE24BA01A16E1A2006D82A4 /* String.swift */; };
+		7CE24BA31A16E2C2006D82A4 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE24BA21A16E2C2006D82A4 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +31,15 @@
 		7CE24B781A16D626006D82A4 /* altitudelabs-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "altitudelabs-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE24B7C1A16D626006D82A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CE24B7D1A16D626006D82A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7CE24B7F1A16D626006D82A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7CE24B821A16D626006D82A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CE24B841A16D626006D82A4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7CE24B871A16D626006D82A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7CE24B8D1A16D626006D82A4 /* altitudelabs-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "altitudelabs-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE24B921A16D626006D82A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CE24B931A16D626006D82A4 /* altitudelabs_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = altitudelabs_iosTests.swift; sourceTree = "<group>"; };
+		7CE24B9E1A16D7A1006D82A4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		7CE24BA01A16E1A2006D82A4 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = "altitudelabs-ios/Extensions/String.swift"; sourceTree = "<group>"; };
+		7CE24BA21A16E2C2006D82A4 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsViewController.swift; path = Controllers/DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 		7CE24B6F1A16D626006D82A4 = {
 			isa = PBXGroup;
 			children = (
+				7CE24BA01A16E1A2006D82A4 /* String.swift */,
 				7CE24B7A1A16D626006D82A4 /* altitudelabs-ios */,
 				7CE24B901A16D626006D82A4 /* altitudelabs-iosTests */,
 				7CE24B791A16D626006D82A4 /* Products */,
@@ -77,8 +82,8 @@
 		7CE24B7A1A16D626006D82A4 /* altitudelabs-ios */ = {
 			isa = PBXGroup;
 			children = (
+				7CE24B9D1A16D779006D82A4 /* Controllers */,
 				7CE24B7D1A16D626006D82A4 /* AppDelegate.swift */,
-				7CE24B7F1A16D626006D82A4 /* ViewController.swift */,
 				7CE24B811A16D626006D82A4 /* Main.storyboard */,
 				7CE24B841A16D626006D82A4 /* Images.xcassets */,
 				7CE24B861A16D626006D82A4 /* LaunchScreen.xib */,
@@ -110,6 +115,15 @@
 				7CE24B921A16D626006D82A4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7CE24B9D1A16D779006D82A4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7CE24B9E1A16D7A1006D82A4 /* LoginViewController.swift */,
+				7CE24BA21A16E2C2006D82A4 /* DetailsViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CE24B801A16D626006D82A4 /* ViewController.swift in Sources */,
+				7CE24BA11A16E1A2006D82A4 /* String.swift in Sources */,
+				7CE24B9F1A16D7A1006D82A4 /* LoginViewController.swift in Sources */,
 				7CE24B7E1A16D626006D82A4 /* AppDelegate.swift in Sources */,
+				7CE24BA31A16E2C2006D82A4 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +423,7 @@
 				7CE24B991A16D626006D82A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7CE24B9A1A16D626006D82A4 /* Build configuration list for PBXNativeTarget "altitudelabs-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +432,7 @@
 				7CE24B9C1A16D626006D82A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
