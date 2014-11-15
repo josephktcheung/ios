@@ -10,4 +10,8 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBAction func backButtonPressed(sender: UIButton) {
+    }
 }

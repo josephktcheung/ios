@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Details View Controller-->
@@ -15,8 +17,73 @@
                     <view key="view" contentMode="scaleToFill" id="Nub-vR-1DW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Altitude Labs" translatesAutoresizingMaskIntoConstraints="NO" id="ikw-RT-fTc">
+                                <rect key="frame" x="40" y="85" width="520" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="1yS-VY-yak"/>
+                                    <constraint firstAttribute="width" secondItem="ikw-RT-fTc" secondAttribute="height" multiplier="1:1" id="Myg-dB-rOY"/>
+                                    <constraint firstAttribute="width" constant="300" id="ZBa-CW-nvc"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1yS-VY-yak"/>
+                                        <exclude reference="ZBa-CW-nvc"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOD-yP-ksC">
+                                <rect key="frame" x="40" y="310" width="520" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VVE-a5-5Wj"/>
+                                </constraints>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="nvx-C6-SFv" eventType="touchUpInside" id="3TJ-MR-q5y"/>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hDO-fr-YaQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ikw-RT-fTc" firstAttribute="top" secondItem="5g7-be-ZvP" secondAttribute="bottom" constant="60" id="0t1-J6-A06">
+                                <variation key="widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="Ty6-NP-n2e" firstAttribute="top" secondItem="JOD-yP-ksC" secondAttribute="bottom" constant="250" id="CoR-cu-fND">
+                                <variation key="widthClass=compact" constant="250"/>
+                            </constraint>
+                            <constraint firstItem="JOD-yP-ksC" firstAttribute="top" secondItem="ikw-RT-fTc" secondAttribute="bottom" constant="70" id="D0n-8E-fX4">
+                                <variation key="widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="ikw-RT-fTc" firstAttribute="leading" secondItem="Nub-vR-1DW" secondAttribute="leading" constant="40" id="LDB-6L-o8B"/>
+                            <constraint firstAttribute="trailing" secondItem="ikw-RT-fTc" secondAttribute="trailing" constant="40" id="RTf-V3-D45"/>
+                            <constraint firstAttribute="centerX" secondItem="ikw-RT-fTc" secondAttribute="centerX" id="Twa-RN-BMG"/>
+                            <constraint firstItem="JOD-yP-ksC" firstAttribute="leading" secondItem="Nub-vR-1DW" secondAttribute="leading" constant="40" id="efI-39-6QN"/>
+                            <constraint firstItem="ikw-RT-fTc" firstAttribute="top" secondItem="Nub-vR-1DW" secondAttribute="topMargin" constant="50" id="gKH-AI-LyN"/>
+                            <constraint firstAttribute="trailing" secondItem="JOD-yP-ksC" secondAttribute="trailing" constant="40" id="wY8-SD-hkM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gKH-AI-LyN"/>
+                                <exclude reference="D0n-8E-fX4"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="0t1-J6-A06"/>
+                                <include reference="gKH-AI-LyN"/>
+                                <include reference="D0n-8E-fX4"/>
+                                <exclude reference="CoR-cu-fND"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="ikw-RT-fTc" id="rRs-8d-oE0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQ9-Bd-5bU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KQ-vd-Tgs">
-                                <rect key="frame" x="40" y="298" width="520" height="40"/>
+                                <rect key="frame" x="40" y="310" width="520" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="pBp-sr-1D1"/>
@@ -49,7 +116,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ga-NR-cG3">
-                                <rect key="frame" x="40" y="149" width="520" height="40"/>
+                                <rect key="frame" x="40" y="161" width="520" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="L7I-cf-DqY"/>
                                 </constraints>
@@ -57,19 +124,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hq0-Vf-VWP">
-                                <rect key="frame" x="60" y="120" width="95" height="21"/>
+                                <rect key="frame" x="60" y="132" width="95" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Y8-rq-T9D">
-                                <rect key="frame" x="60" y="209" width="96" height="21"/>
+                                <rect key="frame" x="60" y="221" width="96" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ax-Oz-My3">
-                                <rect key="frame" x="40" y="238" width="520" height="40"/>
+                                <rect key="frame" x="40" y="250" width="520" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="413-Ju-yeI"/>
                                 </constraints>
@@ -79,6 +146,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5KQ-vd-Tgs" secondAttribute="bottom" constant="250" id="2dQ-Rl-isV">
+                                <variation key="widthClass=compact" constant="250"/>
+                            </constraint>
                             <constraint firstItem="6ax-Oz-My3" firstAttribute="trailing" secondItem="5KQ-vd-Tgs" secondAttribute="trailing" id="2li-X9-eXE"/>
                             <constraint firstItem="Hq0-Vf-VWP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="60" id="4FI-Gp-3Uj"/>
                             <constraint firstItem="6ax-Oz-My3" firstAttribute="leading" secondItem="4ga-NR-cG3" secondAttribute="leading" id="Akv-rg-yRD"/>
@@ -93,10 +163,13 @@
                             <constraint firstItem="6ax-Oz-My3" firstAttribute="trailing" secondItem="4ga-NR-cG3" secondAttribute="trailing" id="fJY-z1-fQZ"/>
                             <constraint firstItem="4ga-NR-cG3" firstAttribute="top" secondItem="Hq0-Vf-VWP" secondAttribute="bottom" constant="8" id="ksI-Cq-J6A"/>
                             <constraint firstItem="4ga-NR-cG3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="l5h-oH-dIE"/>
-                            <constraint firstItem="5KQ-vd-Tgs" firstAttribute="top" secondItem="6ax-Oz-My3" secondAttribute="bottom" constant="20" id="o8p-vq-Pod"/>
+                            <constraint firstItem="5KQ-vd-Tgs" firstAttribute="top" secondItem="6ax-Oz-My3" secondAttribute="bottom" constant="20" id="o8p-vq-Pod">
+                                <variation key="widthClass=compact" constant="30"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="aFD-3c-tWl"/>
                                 <exclude reference="e4v-ca-jNK"/>
                                 <exclude reference="K9E-YR-83G"/>
                             </mask>
@@ -113,4 +186,7 @@
             <point key="canvasLocation" x="377" y="405"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Altitude Labs" width="900" height="900"/>
+    </resources>
 </document>

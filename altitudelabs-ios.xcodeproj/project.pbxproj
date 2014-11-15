@@ -38,7 +38,7 @@
 		7CE24B921A16D626006D82A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CE24B931A16D626006D82A4 /* altitudelabs_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = altitudelabs_iosTests.swift; sourceTree = "<group>"; };
 		7CE24B9E1A16D7A1006D82A4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
-		7CE24BA01A16E1A2006D82A4 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = "altitudelabs-ios/Extensions/String.swift"; sourceTree = "<group>"; };
+		7CE24BA01A16E1A2006D82A4 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = Extensions/String.swift; sourceTree = "<group>"; };
 		7CE24BA21A16E2C2006D82A4 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsViewController.swift; path = Controllers/DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +63,6 @@
 		7CE24B6F1A16D626006D82A4 = {
 			isa = PBXGroup;
 			children = (
-				7CE24BA01A16E1A2006D82A4 /* String.swift */,
 				7CE24B7A1A16D626006D82A4 /* altitudelabs-ios */,
 				7CE24B901A16D626006D82A4 /* altitudelabs-iosTests */,
 				7CE24B791A16D626006D82A4 /* Products */,
@@ -82,6 +81,7 @@
 		7CE24B7A1A16D626006D82A4 /* altitudelabs-ios */ = {
 			isa = PBXGroup;
 			children = (
+				7CE24BA41A16E46F006D82A4 /* Extensions */,
 				7CE24B9D1A16D779006D82A4 /* Controllers */,
 				7CE24B7D1A16D626006D82A4 /* AppDelegate.swift */,
 				7CE24B811A16D626006D82A4 /* Main.storyboard */,
@@ -124,6 +124,14 @@
 				7CE24BA21A16E2C2006D82A4 /* DetailsViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7CE24BA41A16E46F006D82A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7CE24BA01A16E1A2006D82A4 /* String.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
