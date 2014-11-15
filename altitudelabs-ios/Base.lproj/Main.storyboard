@@ -4,6 +4,24 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
+        <!--Details View Controller-->
+        <scene sceneID="yt6-mk-CeI">
+            <objects>
+                <viewController id="nvx-C6-SFv" customClass="DetailsViewController" customModule="altitudelabs_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5g7-be-ZvP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ty6-NP-n2e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nub-vR-1DW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sQ9-Bd-5bU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="405"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -27,7 +45,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R5l-Hl-8Qa"/>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TOm-3O-4o6"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ga-NR-cG3">
@@ -87,10 +105,12 @@
                     <connections>
                         <outlet property="passwordField" destination="6ax-Oz-My3" id="rqu-PE-KMl"/>
                         <outlet property="usernameField" destination="4ga-NR-cG3" id="Zlx-Yc-Hfa"/>
+                        <segue destination="nvx-C6-SFv" kind="show" identifier="to details" id="X1Y-eY-a24"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="377" y="405"/>
         </scene>
     </scenes>
 </document>

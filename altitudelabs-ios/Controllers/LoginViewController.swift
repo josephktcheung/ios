@@ -13,9 +13,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    
-    @IBAction func loginButtonPressed(sender: AnyObject) {
-        validateLogin()
+    @IBAction func loginButtonPressed(sender: UIButton) {
+        if validateLogin() {
+            performSegueWithIdentifier("to details", sender: sender)
+        }
     }
     
     func validateLogin() -> Bool {

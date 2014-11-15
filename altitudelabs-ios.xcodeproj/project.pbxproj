@@ -14,6 +14,7 @@
 		7CE24B941A16D626006D82A4 /* altitudelabs_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE24B931A16D626006D82A4 /* altitudelabs_iosTests.swift */; };
 		7CE24B9F1A16D7A1006D82A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE24B9E1A16D7A1006D82A4 /* LoginViewController.swift */; };
 		7CE24BA11A16E1A2006D82A4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE24BA01A16E1A2006D82A4 /* String.swift */; };
+		7CE24BA31A16E2C2006D82A4 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE24BA21A16E2C2006D82A4 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		7CE24B931A16D626006D82A4 /* altitudelabs_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = altitudelabs_iosTests.swift; sourceTree = "<group>"; };
 		7CE24B9E1A16D7A1006D82A4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		7CE24BA01A16E1A2006D82A4 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = "altitudelabs-ios/Extensions/String.swift"; sourceTree = "<group>"; };
+		7CE24BA21A16E2C2006D82A4 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailsViewController.swift; path = Controllers/DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				7CE24B9E1A16D7A1006D82A4 /* LoginViewController.swift */,
+				7CE24BA21A16E2C2006D82A4 /* DetailsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				7CE24BA11A16E1A2006D82A4 /* String.swift in Sources */,
 				7CE24B9F1A16D7A1006D82A4 /* LoginViewController.swift in Sources */,
 				7CE24B7E1A16D626006D82A4 /* AppDelegate.swift in Sources */,
+				7CE24BA31A16E2C2006D82A4 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
