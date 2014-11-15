@@ -13,6 +13,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        usernameField.text = ""
+        passwordField.text = ""
+    }
+    
     @IBAction func loginButtonPressed(sender: UIButton) {
         if validateLogin() {
             performSegueWithIdentifier("to details", sender: sender)
