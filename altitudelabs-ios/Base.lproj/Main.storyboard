@@ -18,20 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Altitude Labs" translatesAutoresizingMaskIntoConstraints="NO" id="ikw-RT-fTc">
-                                <rect key="frame" x="40" y="85" width="520" height="217"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="1yS-VY-yak"/>
-                                    <constraint firstAttribute="width" secondItem="ikw-RT-fTc" secondAttribute="height" multiplier="1:1" id="Myg-dB-rOY"/>
-                                    <constraint firstAttribute="width" constant="300" id="ZBa-CW-nvc"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="1yS-VY-yak"/>
-                                        <exclude reference="ZBa-CW-nvc"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOD-yP-ksC">
                                 <rect key="frame" x="40" y="310" width="520" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,34 +33,79 @@
                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hDO-fr-YaQ"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Altitude Labs" translatesAutoresizingMaskIntoConstraints="NO" id="ikw-RT-fTc">
+                                <rect key="frame" x="40" y="85" width="520" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="1yS-VY-yak"/>
+                                    <constraint firstAttribute="width" secondItem="ikw-RT-fTc" secondAttribute="height" multiplier="1:1" id="Myg-dB-rOY"/>
+                                    <constraint firstAttribute="width" constant="300" id="ZBa-CW-nvc"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1yS-VY-yak"/>
+                                        <exclude reference="ZBa-CW-nvc"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lN-8D-n2E">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="imagePressed:" destination="nvx-C6-SFv" eventType="touchUpInside" id="6vw-O3-X2g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ikw-RT-fTc" firstAttribute="top" secondItem="5g7-be-ZvP" secondAttribute="bottom" constant="60" id="0t1-J6-A06">
                                 <variation key="widthClass=compact" constant="30"/>
                             </constraint>
+                            <constraint firstItem="ikw-RT-fTc" firstAttribute="height" secondItem="3lN-8D-n2E" secondAttribute="height" id="94k-4e-OHU"/>
                             <constraint firstItem="Ty6-NP-n2e" firstAttribute="top" secondItem="JOD-yP-ksC" secondAttribute="bottom" constant="250" id="CoR-cu-fND">
                                 <variation key="widthClass=compact" constant="250"/>
                             </constraint>
                             <constraint firstItem="JOD-yP-ksC" firstAttribute="top" secondItem="ikw-RT-fTc" secondAttribute="bottom" constant="70" id="D0n-8E-fX4">
                                 <variation key="widthClass=compact" constant="30"/>
                             </constraint>
+                            <constraint firstItem="ikw-RT-fTc" firstAttribute="leading" secondItem="3lN-8D-n2E" secondAttribute="leading" id="Hv6-ur-4ew"/>
                             <constraint firstItem="ikw-RT-fTc" firstAttribute="leading" secondItem="Nub-vR-1DW" secondAttribute="leading" constant="40" id="LDB-6L-o8B"/>
+                            <constraint firstItem="ikw-RT-fTc" firstAttribute="width" secondItem="3lN-8D-n2E" secondAttribute="width" id="Pmm-Tz-buc"/>
                             <constraint firstAttribute="trailing" secondItem="ikw-RT-fTc" secondAttribute="trailing" constant="40" id="RTf-V3-D45"/>
                             <constraint firstAttribute="centerX" secondItem="ikw-RT-fTc" secondAttribute="centerX" id="Twa-RN-BMG"/>
                             <constraint firstItem="JOD-yP-ksC" firstAttribute="leading" secondItem="Nub-vR-1DW" secondAttribute="leading" constant="40" id="efI-39-6QN"/>
-                            <constraint firstItem="ikw-RT-fTc" firstAttribute="top" secondItem="Nub-vR-1DW" secondAttribute="topMargin" constant="50" id="gKH-AI-LyN"/>
+                            <constraint firstItem="ikw-RT-fTc" firstAttribute="top" secondItem="3lN-8D-n2E" secondAttribute="top" constant="-139" id="fqo-6N-l9G">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="ikw-RT-fTc" firstAttribute="top" secondItem="Nub-vR-1DW" secondAttribute="topMargin" constant="50" id="gKH-AI-LyN">
+                                <variation key="widthClass=compact" constant="70"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="JOD-yP-ksC" secondAttribute="trailing" constant="40" id="wY8-SD-hkM"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="3lN-8D-n2E"/>
+                            </mask>
                             <mask key="constraints">
+                                <exclude reference="94k-4e-OHU"/>
+                                <exclude reference="Hv6-ur-4ew"/>
+                                <exclude reference="Pmm-Tz-buc"/>
+                                <exclude reference="fqo-6N-l9G"/>
                                 <exclude reference="gKH-AI-LyN"/>
                                 <exclude reference="D0n-8E-fX4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="3lN-8D-n2E"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="0t1-J6-A06"/>
+                                <include reference="94k-4e-OHU"/>
+                                <include reference="Hv6-ur-4ew"/>
+                                <include reference="Pmm-Tz-buc"/>
+                                <include reference="fqo-6N-l9G"/>
                                 <include reference="gKH-AI-LyN"/>
                                 <include reference="D0n-8E-fX4"/>
                                 <exclude reference="CoR-cu-fND"/>
@@ -101,20 +132,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KQ-vd-Tgs">
-                                <rect key="frame" x="40" y="310" width="520" height="40"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="pBp-sr-1D1"/>
-                                </constraints>
-                                <state key="normal" title="LOGIN">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TOm-3O-4o6"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ga-NR-cG3">
                                 <rect key="frame" x="40" y="161" width="520" height="40"/>
                                 <constraints>
@@ -143,6 +160,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KQ-vd-Tgs">
+                                <rect key="frame" x="40" y="310" width="520" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pBp-sr-1D1"/>
+                                </constraints>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TOm-3O-4o6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
