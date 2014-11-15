@@ -12,4 +12,21 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    
+    
+    @IBAction func loginButtonPressed(sender: AnyObject) {
+        validateLogin()
+    }
+    
+    func validateLogin() -> Bool {
+        let username = usernameField.text
+        let password = passwordField.text
+        
+        let isUsernameAlphabetic = username.validateAlphabeticString()
+        if countElements(username) > 7 && countElements(password) > 7 && isUsernameAlphabetic {
+            return true
+        } else {
+            return false
+        }
+    }
 }
